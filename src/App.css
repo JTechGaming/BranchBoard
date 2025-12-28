@@ -95,6 +95,21 @@ button {
   margin-right: 5px;
 }
 
+.canvas-pen {
+  cursor: crosshair;
+}
+
+.canvas-eraser {
+  cursor: cell;
+}
+
+.toolbar {
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: #f5f5f5;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     color: #f6f6f6;
