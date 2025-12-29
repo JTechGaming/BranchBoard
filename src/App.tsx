@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Stage, Layer, Line, Transformer } from "react-konva";
 import { nanoid } from "nanoid";
+import { exists, create, BaseDirectory } from '@tauri-apps/plugin-fs';
 import "./App.css";
 
 type Tool = "select" | "pen" | "eraser";
@@ -17,7 +18,7 @@ function Toolbar({ tool, setTool }: any) {
     <div className="toolbar">
       <button onClick={() => setTool("select")}>Select</button>
       <button onClick={() => setTool("pen")}>Pen</button>
-      <button onClick={() => setTool("pan")}>Pan</button>
+      <button onClick={() => setTool("eraser")}>Eraser</button>
     </div>
   );
 }
